@@ -12,8 +12,10 @@ Clone this repository and run:
 cd PyIcns
 pip install -r requirements.txt
 python3 setup.py
-python3 start.py
+sudo python3 start.py
 ```
+
+**You need to disable SIP on Pre-Catalina Versions. For Catalina you must root remount! Do so with this: `sudo mount -wu /'**
 
 This should be pretty self-explainatory from there.
 
