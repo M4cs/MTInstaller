@@ -63,7 +63,7 @@ def main():
       else:
         print('Error! The File Does Not Exist!')
   elif answer == "3":
-    webbrowser.open_new_tab('https://github.com/PyIncs/')
+    webbrowser.open_new_tab('https://github.com/M4cs/PyIcns/')
   elif answer == "2":
     print('\nComing Soon!\n')
   elif answer == "4" or "exit":
