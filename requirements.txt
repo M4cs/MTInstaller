@@ -1,0 +1,2 @@
+requests==2.22.0
+progressbar2==3.42.0
