@@ -5,7 +5,9 @@ import time
 import progressbar
 import webbrowser
 
-menu = """\
+__version__ = "1.0.2"
+
+menu = f"""\
 
    ▄███████▄ ▄██   ▄    ▄█   ▄████████ ███▄▄▄▄      ▄████████ 
   ███    ███ ███   ██▄ ███  ███    ███ ███▀▀▀██▄   ███    ███ 
@@ -18,6 +20,8 @@ menu = """\
                                                               
 
 Welcome to Pyicns!
+
+Current Version: {__version__}
 
 This is an easy to use manager for installing macOS themes. 
 All you need to do is feed a folder with images in a hierarchy
@@ -38,8 +42,6 @@ If you have any questions please contact me on twitter:
 
 4/ Exit
 """
-
-__version__ = "1.0.1"
 
 def check_updoots():
   response = requests.get('https://raw.githubusercontent.com/M4cs/PyIcns/master/version').text
@@ -105,6 +107,9 @@ def main():
     main()
 
 if __name__ == "__main__":
+  os.system('clear')
+  print('Checking For Updates...')
   check_updoots()
+  print('Up To Date!')
   print(menu)
   main()
