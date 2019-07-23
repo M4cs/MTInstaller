@@ -1,5 +1,6 @@
 from pyicns import compiler
 import os
+import requests
 import time
 import progressbar
 import webbrowser
@@ -36,6 +37,31 @@ If you have any questions please contact me on twitter:
 4/ Exit
 """
 
+__version__ = "1.0.1"
+
+def check_updoots():
+  response = requests.get('https://raw.githubusercontent.com/M4cs/PyIcns/master/version').text
+  if response != __version__:
+    print('Current Version: %s' % __version__)
+    print('Most Recent Version: %s' % response)
+    print('Would you like to update?')
+    ans1 = input('[y\\n]').lower()
+    if ans1 == "y":
+      print('Did you clone this from GitHub?')
+      ans2 = input('[y\\n]').lower()
+      if ans2 == "y":
+        print('Updating')
+        os.system('git fetch && git pull')
+      else:
+        count = 3
+        while count != 0:
+          print('Please Clone From The Browser Opening In ' + str(count) + '\r')
+          time.sleep(1)
+          count = count - 1
+        webbrowser.open_new_tab('https://github.com/M4cs/PyIcns')
+        exit()
+    else:
+      pass
 
 terminal = "pyicns$ "
 print(menu)
@@ -70,6 +96,7 @@ def main():
     os._exit(0)
   main()
 try:
+  check_updoots()
   main()
 except KeyboardInterrupt:
   print('\nGoodbye!')
