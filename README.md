@@ -9,13 +9,15 @@ To start make sure you have Python 3.6+ installed and MacOS.
 
 You might as well go through [Help](https://github.com/M4cs/PyIcns/blob/master/README.md#help) and follow those steps as well.
 
-Clone this repository and run:
+Clone this repository into /System and run:
 ```
 cd PyIcns
 pip install -r requirements.txt
-python3 setup.py
+sudo python3 setup.py
 sudo python3 start.py
 ```
+
+If you can't write to system refer to [Help](https://github.com/M4cs/PyIcns/blob/master/README.md#help).
 
 This should be pretty self-explainatory from there.
 
@@ -33,22 +35,13 @@ If you can't write to root or are on Catalina you may have to follow the steps b
 
 **You need to disable SIP on Post-Cap Versions.**
 
-1. Shut down your Mac
+1. First run `sudo mount -uw /`. Even if it errors that's fine.
 
-2. Boot into the Recovery Mode
+2. Run `mount -uw /System/Volumes/Data`. Even if it errors that's fine.
 
-3. When shut, start pressing CMD + R and while still pressing power up your machine and keep pressing the button combination until the Apple logo appears so that your Mac boots into the Recovery Mode.
+3. Run `cd /System && mkdir AppleInternal`
 
-4. Click Utilites and choose Terminal
-
-5. Type diskutil list and identify the id of your disk named Macintosh HD
-it should be something like `/dev/disk2s2`
-
-6. Now we need to mount it: type `diskutil mount /dev/[YOUR_DISK_ID]`. If successful, keep going with the next step. If not, you probably got a message regarding APFS that the disk needs to be unlocked, so type `diskutil apfs unlockVolume /dev/[YOUR_DISK_ID]`
-
-7. Finally you can create the required folder to enable writing: type `mkdir /Volumes/Macintosh\ HD/AppleInternal $$ mkdir /AppleInternal`
-
-**For Catalina you must root remount! Do so with this: `sudo mount -wu /`**
+4. You can also add `AppleInternal` to root.
 
 # Credit
 
