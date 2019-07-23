@@ -1,8 +1,8 @@
 from .compiler import Compiler
 
-__version__ = "1.0.3"
+__version__ = "1.0.4"
 __changelog__ = """\
-    
+
 Version 1.0.3:
 
 - Introduces Changelog and Command To Match

@@ -99,6 +99,7 @@ def main():
                       print('Theming Folder...')
                       print('bins/fileicon set "{}" "{}"'.format(to_be, os.path.realpath(from_here.replace('/', '') + '/')))
                       os.system('bins/fileicon set "{}" "{}"'.format(os.path.realpath(to_be), os.path.realpath(from_here.replace('/', '') + '/' + image)))
+                      os.system('killall Dock && killall Finder')
                       break
                     else:
                       print('File Does Not Exist!')
@@ -125,6 +126,7 @@ def main():
                 comp.set_icon()
                 bar.update(1)
                 count = count + 1
+              os.system('killall Dock && killall Finder')
               break
           elif response == 'n':
             break

@@ -2,3 +2,4 @@ bins/
 test_folder/
 **/*.png
 **/*.pyc
+dist/
