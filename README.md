@@ -7,6 +7,8 @@ MacOS Theming Toolkit Using FileIcon
 
 To start make sure you have Python 3.6+ installed and MacOS.
 
+You might as well go through [Help](https://github.com/M4cs/PyIcns/blob/master/README.md#help) and follow those steps as well.
+
 Clone this repository and run:
 ```
 cd PyIcns
