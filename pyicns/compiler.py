@@ -26,6 +26,8 @@ class Compiler:
             os.system('bins/fileicon set "/System/Applications/{}.app" "{}"'.format(self.current_app, os.path.realpath(self.folder_path + '/' + self.current_app + '.png')))
         elif os.path.exists('/Applications/{}.app'.format(self.current_app)):
             os.system('bins/fileicon set "/Applications/{}.app" "{}"'.format(self.current_app, os.path.realpath(self.folder_path + '/' + self.current_app + '.png')))
+        else:
+            print('User Missing Application: %s' % self.current_app)
 
                         
 
@@ -34,5 +36,6 @@ class Compiler:
         new_files = []
         for i in files:
             if '.DS_Store' not in i:
+                print('Found Application: %s' % i.replace('.png', ''))
                 new_files.append(i)
         return len(new_files)

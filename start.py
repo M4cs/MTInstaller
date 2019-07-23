@@ -48,7 +48,7 @@ def main():
       if os.path.exists(ans1):
         comp = compiler.Compiler(ans1)
         file_count = comp.file_count()
-        print('Found %s Files For Conversion In This Folder. Is This Correct? [Y\\n]' % file_count)
+        print('Found %s Icons For The Applications In This Folder. Is This Correct? [Y\\n]' % file_count)
         response = input(terminal).lower()
         if response == 'y':
           print('Setting Theme...')
@@ -72,5 +72,5 @@ def main():
 try:
   main()
 except KeyboardInterrupt:
-  print('Goodbye!')
+  print('\nGoodbye!')
 
