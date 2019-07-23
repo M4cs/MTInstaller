@@ -19,11 +19,13 @@ menu = """\
 
 Welcome to Pyicns!
 
-This is an easy to use manager for installing and compiling
-macOS themes. All you need to do is feed a folder with images
-in a hierarchy depicted on the GitHub documentation. If you need
-a link simply type "github" and press enter. This will open up
-a new tab with the github documentation!
+This is an easy to use manager for installing macOS themes. 
+All you need to do is feed a folder with images in a hierarchy
+depicted on the GitHub documentation. 
+
+If you need a link simply type "github" and press enter.
+
+This will open up a new tab with the github documentation!
 
 If you have any questions please contact me on twitter:
 @maxbridgIand <- that is an I yes. Not an L!
@@ -62,9 +64,10 @@ def check_updoots():
         exit()
     else:
       pass
+  else:
+    pass
 
 terminal = "pyicns$ "
-print(menu)
 def main():
   answer = input(terminal).lower()
   if answer == "1":
@@ -88,16 +91,20 @@ def main():
             break
       else:
         print('Error! The File Does Not Exist!')
-  elif answer == "3":
-    webbrowser.open_new_tab('https://github.com/M4cs/PyIcns/')
-  elif answer == "2":
+    main()
+  elif answer[0:1] == "2":
     print('\nComing Soon!\n')
-  elif answer == "4" or "exit":
-    os._exit(0)
-  main()
-try:
-  check_updoots()
-  main()
-except KeyboardInterrupt:
-  print('\nGoodbye!')
+    main()
+  elif answer[0:1] == "3" or answer[0:5] == "github":
+    webbrowser.open_new_tab('https://github.com/M4cs/PyIcns')
+    main()
+  elif answer[0:1] == "4" or answer[0:4] == "exit":
+    exit()
+  else:
+    print('Unknown Option!')
+    main()
 
+if __name__ == "__main__":
+  check_updoots()
+  print(menu)
+  main()
