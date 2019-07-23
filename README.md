@@ -7,7 +7,7 @@ MacOS Theming Toolkit Using FileIcon
 
 To start make sure you have Python 3.6+ installed and MacOS.
 
-**You need to disable SIP on Pre-Catalina Versions. For Catalina you must root remount! Do so with this: `sudo mount -wu /`**
+**You need to disable SIP on Pre-Catalina Versions.**
 
 1. Shut down your Mac
 
@@ -23,6 +23,8 @@ it should be something like `/dev/disk2s2`
 6. Now we need to mount it: type `diskutil mount /dev/[YOUR_DISK_ID]`. If successful, keep going with the next step. If not, you probably got a message regarding APFS that the disk needs to be unlocked, so type `diskutil apfs unlockVolume /dev/[YOUR_DISK_ID]`
 
 7. Finally you can create the required folder to enable writing: type `mkdir /Volumes/Macintosh\ HD/AppleInternal $$ mkdir /AppleInternal`
+
+**For Catalina you must root remount! Do so with this: `sudo mount -wu /`**
 
 
 Clone this repository and run:
