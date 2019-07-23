@@ -64,10 +64,10 @@ def check_updoots():
       else:
         count = 3
         while count != 0:
-          print('Please Clone From The Browser Opening In ' + str(count) + '\r')
+          print('Please Download The Latest Release In ' + str(count) + '\r')
           time.sleep(1)
           count = count - 1
-        webbrowser.open_new_tab('https://github.com/M4cs/PyIcns')
+        webbrowser.open_new_tab('https://github.com/M4cs/PyIcns/releases')
         exit()
     else:
       pass
