@@ -7,7 +7,7 @@ MacOS Theming Toolkit Using FileIcon
 
 To start make sure you have Python 3.6+ installed and MacOS.
 
-**You need to disable SIP on Pre-Catalina Versions.**
+**You need to disable SIP on Post-Cap Versions.**
 
 1. Shut down your Mac
 
