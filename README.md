@@ -12,8 +12,10 @@ Clone this repository and run:
 cd PyIcns
 pip install -r requirements.txt
 python3 setup.py
-python3 start.py
+sudo python3 start.py
 ```
+
+**You need to disable SIP on Pre-Catalina Versions. For Catalina you must root remount! Do so with this: `sudo mount -wu /`**
 
 This should be pretty self-explainatory from there.
 
@@ -24,3 +26,9 @@ Right now you should just include 1 512x512 png of whatever applications you wan
 ![Ex1](https://i.imgur.com/ZeHbaQR.png)
 
 From here you simply package them in a zip or whatever and distrubte however you'd like. People will unzip and just enter the folder name containing all the icons. They will automatically map to installed applications and install.
+
+# Credit
+
+Shoutout to the dev behind FileIcon this tool makes this whole toolkit possible!
+
+https://github.com/mklement0/fileicon
