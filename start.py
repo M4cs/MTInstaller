@@ -48,7 +48,7 @@ Type 'menu' to display this menu
 """
 
 def check_updoots():
-  response = requests.get('https://raw.githubusercontent.com/M4cs/PyIcns/master/version').text
+  response = requests.get('https://raw.githubusercontent.com/M4cs/MTInstaller/master/version').text
   if response != __version__:
     print('Current Version: %s' % __version__)
     print('Most Recent Version: %s' % response)
@@ -66,7 +66,7 @@ def check_updoots():
           print('Please Download The Latest Release In ' + str(count) + '\r')
           time.sleep(1)
           count = count - 1
-        webbrowser.open_new_tab('https://github.com/M4cs/PyIcns/releases')
+        webbrowser.open_new_tab('https://github.com/M4cs/MTInstaller/releases')
         exit()
     else:
       pass
