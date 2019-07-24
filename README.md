@@ -14,10 +14,6 @@ This will install the `easy_mount` command to your system along with necessary t
 
 
 
-Head to the [Releases Page](https://github.com/M4cs/MTInstaller/releases) and get yourself the most recent release of `mti-cli-gui` and `mti-cli`. These two packages will allow
-
-
-
 # Credit
 
 Shoutout to the dev behind FileIcon this tool makes this whole toolkit possible!
