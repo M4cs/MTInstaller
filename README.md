@@ -1,7 +1,13 @@
-# PyIcns
-MacOS Theming Toolkit Using FileIcon
+# MTInstaller
+MacOS Theming Toolkit
 
 # Getting Started
+
+You might as well go through [Help](https://github.com/M4cs/PyIcns/blob/master/README.md#help) and follow those steps as well.
+
+Head to the [Releases Page](https://github.com/M4cs/MTInstaller/releases) and get yourself the most recent release of `mti-cli-gui` and `mti-cli`. These two packages will allow
+
+# Getting Started From Source
 
 **This program is still in active development. If you are reading this right now this software is still in pre-release.**
 
