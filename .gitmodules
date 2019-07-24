@@ -1,0 +1,3 @@
+[submodule "mti-cli"]
+	path = mti-cli
+	url = https://github.com/M4cs/mti-cli.git
