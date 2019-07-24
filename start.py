@@ -1,4 +1,4 @@
-from pyicns import Compiler, __changelog__, __version__
+from mtinstaller import Compiler, __changelog__, __version__
 import os
 import requests
 import time
@@ -136,7 +136,7 @@ def main():
     elif answer[0:1] == "2" or answer == "download":
       print('\nComing Soon!\n')
     elif answer == "3" or answer[0:5] == "github":
-      webbrowser.open_new_tab('https://github.com/M4cs/PyIcns')
+      webbrowser.open_new_tab('https://github.com/M4cs/mtinstaller')
     elif answer == "4" or answer == "changelog":
       print(__changelog__)
     elif answer == "5" or answer[0:4] == "exit":
@@ -146,7 +146,7 @@ def main():
     else:
       print('Unknown Option!')
 
-terminal = "pyicns$ "
+terminal = "mtinstaller$ "
 
 if __name__ == "__main__":
   os.system('clear')
